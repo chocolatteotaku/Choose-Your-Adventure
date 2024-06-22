@@ -1,0 +1,57 @@
+print("You landed on a deserted island and you found a map in your bag.")
+# Made in a code along session on August 4, 2023.
+# updated on June 19th 2024.
+letters = ['Q','W','E','R','T','Y','U','I',
+           'O','P','A','S','D','F','G','H','J','K','L']
+
+def choices():
+  while True:
+    error_message = "\n Press the STOP button above, and then press RUN to try again. "
+    first_choice = int(input("\n What do you do? Option 1: [Read the map] or Option 2: [Go to Sleep]?\n"))
+    if first_choice == 1: 
+      second_input = int(input("\n You see an X on the map. Do you 1: [Follow the Map] or 2: [Traverse Elsewhere]?\n"))
+    elif first_choice == 2: 
+      print("\n You went to sleep. You wake up to a bear eating you alive. You died.", error_message)
+      break
+    elif first_choice == letters:
+      print("\n You made an error in your response. Next time, respond with just the number of your option :) \n Press the STOP button below, and then press RUN to try again. ")
+      break
+    if second_input == 1:
+      third_choice = int(input("\n You find a room full of food. Do you 1:[Stay and Eat food that is not yours] or 2:[Keep Moving]\n"))
+    elif second_input == 2:
+      print("\n You tried to go somewhere else and fell off a cliff. Read the map next time, bud.", error_message)
+      break
+    elif second_input == letters:
+      print("\n You made an error in your response. Next time, respond with just the number of your option :]\n Press the STOP button below, and then press RUN to try again.")
+      break
+    if third_choice == 1:
+      print("\n Woah, slow down there pal! I think you ate too much... you can't get up anymore -_-", error_message)
+      break
+    elif third_choice == 2:
+      fourth_choice = int(input("\n You find a herd of animals. They're looking at you a little weird... do you 1:[Get on your knees and pray] or 2: [Run Away]?\n"))
+    elif third_choice == letters:
+      print("\n You made an error in your response. Next time, respond with just the number of your option :)\n Press the STOP button below, and then press RUN to try again.")
+      break
+    if fourth_choice == 1:
+      fifth_choice = int(input("\n Hallelujah! The animals noticed your map and decided to give you the key to their treasury! Do you 1:[Give it Back] or 2: [Go to the Treasury]?\n"))
+    elif fourth_choice == 2:
+      print("\n You didn't look forward and ran into a lion. Ouch.", error_message)
+      break
+    elif fourth_choice == letters:
+      print("\n You made an error in your response. Next time, respond with just the number of your option :)\n Press the STOP button below, and then press RUN to try again.")
+      break
+    elif fifth_choice == 1:
+      print("\n Why would you do that... game over", error_message)
+      break
+    if fifth_choice == 2:
+      final_choice = int(input("\n You Found the Treasure! But it seems like it belongs to another person, because you see a wallet and a credit card with someone's name on it. Do you 1:[Embark on a journey to find the owner] or 2: [Take the treasure and leave! I found it anyways...]?\n"))
+    if final_choice == 1:
+      print("\n Good idea. It's not ours, so we shouldn't take it.\n You searched high and low for the owner, only to soon realize that their phone number was on their wallet. And you have your phone with you. Wait, how is there service? Anyways, you called the owner and they were very glad to hear that their money is in good hands. They rescue you via a helicopter and treat you to a very nice meal afterwards. Sweet, You won!!", error_message)
+      break
+    elif final_choice == 2:
+     print("\n I mean, you DID just embark on a journey to find treasure. It would suck to not take any of it home, but God isn't very pleased with your answer. The money fades away to ashes, and you are left all alone in a dark cave. AND those creepy animals from before are back. Yikes! Game over.",error_message)
+     break
+    elif final_choice == letters:
+      print("\n You made an error in your response. Next time, respond with just the number of your option :)\n Press the STOP button below, and then press RUN to try again.")
+      break
+choices()
